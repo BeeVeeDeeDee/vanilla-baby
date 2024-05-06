@@ -1,0 +1,79 @@
+/* default-theme (dark) styling */
+:root {
+  --home-text-color: var(--text-color);
+  --home-footer-bg: none;
+  --fat-text: -webkit-linear-gradient(#464646, #2b2a2a);
+  --footer-text: #666;
+}
+
+/* light-theme extra styling */
+.light-theme {
+  /* light-theme styling */
+  --home-text-color: #343434;
+  --home-footer-bg: rgba(147, 147, 147, 0);
+  --fat-text: -webkit-linear-gradient(#c5c5c5, #dfdfdf);
+  --footer-text: #afafaf;
+} 
+
+.home-view {
+  /* view specific styling */
+  color: var(--home-text-color);
+}
+
+.action-bar.home {
+  /* view specific footer styling */
+  user-select: none;
+  text-transform: none;
+  color: var(--footer-text);
+  background: var(--navbar-bg);
+}
+
+/* grid specific styling in home-view */
+.dg-heading {
+  color: var(--default-text);
+  opacity:0.7;
+  text-transform: uppercase;
+  font-family: var(--Barlow-font);
+  font-weight: 700;
+  padding:1rem;
+}
+
+.dg-body  {
+  font-weight:700;
+  text-transform: uppercase;
+  font-family: var(--Barlow-font);
+  background: var(--fat-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: var(--transition);
+}
+
+@media (min-width: 0) {
+  .dg-body {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .dg-body {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .dg-body {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dg-body {
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dg-body {
+    font-size: 12rem;
+  }
+}

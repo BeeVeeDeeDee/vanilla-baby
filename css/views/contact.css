@@ -1,0 +1,42 @@
+/* default-theme (dark) styling */
+:root {
+  --input-bg: #575757;
+  --input-placeholder-color: #9e9e9e;
+  --input-color: #ffffff;
+}
+
+/* light-theme extra styling */
+.light-theme {
+  --input-bg: #c8c8c8;
+  --input-placeholder-color: #acacac;
+  --input-color: var(--default-text-color);
+} 
+
+.contact-view {
+  /* view specific styling */
+}
+
+.contact-view input[type=text] {
+  position: relative;
+  width: 30vw; 
+  padding: 8px 16px; 
+  margin: 8px 0; 
+  box-sizing: border-box;
+  background: var(--input-bg);
+  border: none;
+  outline:0;
+  color:var(--input-color);
+  font-weight:100;
+}
+
+::placeholder {
+  color: var(--input-placeholder-color);
+}
+
+.action-bar.contact {
+  /* view specific footer styling */
+  user-select: none;
+  text-transform: none;
+  color: var(--footer-text);
+  background: var(--navbar-bg);
+}

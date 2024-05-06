@@ -1,0 +1,30 @@
+/* default-theme (dark) styling */
+:root {
+  --about-text-color: var(--text-color);
+  --footer-bg: rgba(247, 151, 7, 0.07);
+}
+
+/* light-theme extra styling */
+.light-theme {
+  /* light-theme styling */
+  --about-text-color: #037afa;
+  --footer-bg: rgba(7, 27, 247, 0.07);
+} 
+
+.about-view {
+  /* view specific styling */
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  justify-content: center;
+  color: var(--home-text-color);
+}
+
+.action-bar.about {
+  /* view specific footer styling */
+  user-select: none;
+  text-transform: none;
+  color: var(--footer-text);
+  background: var(--navbar-bg);
+}
+

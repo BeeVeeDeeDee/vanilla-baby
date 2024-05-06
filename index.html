@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>%VITE_APP_NAME%</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+  <!-- loader element -->
+  <div data-component="loader" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; background: #333; z-index: 999; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+      <path fill="rgb(58, 134, 255)" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+        <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.7s" repeatCount="indefinite"/>
+      </path>
+    </svg>
+  </div>
+  <!-- header element -->
+  <header>
+    <div class="navigation-bar">
+      <div class="icon-placeholder"></div>
+      <div class="breadcrumb">
+        <div class="breadcrum-text" data-component="breadcrumb" data-group="navbar">Home</div>
+        <div class="flipswitch" data-component="flipswitch" data-group="navbar">
+          <input type="checkbox" name="flipswitch" class="flipswitch-cb" data-component="tsInput" data-group="navbar">
+          <label class="flipswitch-label">
+            <div class="flipswitch-inner"></div>
+            <div class="flipswitch-switch"></div>
+          </label>
+        </div>
+
+      </div>
+      <div class="icon-placeholder"></div>
+    </div>
+  </header>
+  <!-- menu panel -->
+  <aside class="side-panel menu" data-component="menuPanel" data-group="menuPanel">
+    <div class="button-bar">
+      <div class="icon align-right" data-component="menuButton" data-group="menuPanel">
+        <span class="material-symbols-outlined">menu</span>
+      </div>
+    </div>
+    <div class="content-section">
+      <div class="menu-item" data-component="menuItem" data-path="/" data-group="menuPanel">Home</div>
+      <div class="menu-item" data-component="menuItem" data-path="/about" data-group="menuPanel">About</div>
+      <div class="menu-item" data-component="menuItem" data-path="/contact" data-group="menuPanel">Contact</div>
+    </div>
+    <div class="footer-section"></div>
+  </aside>
+  <!-- main content -->
+  <main data-component="main" data-group="main">
+    <div class="default-grid home-view">
+      <div class="dg-heading">Now it's on.</div>
+      <div class="dg-body">%VITE_APP_NAME%</div>
+      <div class="dg-footer"></div>
+    </div>
+  </main>
+  <!-- help panel -->
+  <aside class="side-panel help" data-component="helpPanel" data-group="helpPanel">
+    <div class="button-bar">
+      <div class="icon align-left" data-component="helpButton" data-group="helpPanel">
+        <span class="material-symbols-outlined">question_mark</span>
+      </div>
+    </div>
+    <div class="content-section">
+      <div class="i-heading" data-component="helpHeading" data-group="helpPanel">404</div>
+      <div class="i-subtitle" data-component="helpSubtitle" data-group="helpPanel">Not Found</div>
+      <div class="i-body" data-component="helpBody" data-group="helpPanel">The page you are looking for does not or no
+        longer exist</div>
+    </div>
+    <div class="footer-section"></div>
+  </aside>
+  <!-- footer element -->
+  <footer data-component="footer" data-group="footer">
+    <div class="action-bar" data-component="actionBar" data-group="footer"></div>
+  </footer>
+  
+  <script type="module">
+  
+    const handleLoadingEvents = (type) => {
+
+      type === 'load' && console.log(`loading...`, `loading-time (ms):`, performance.now()); 
+
+      if (type === 'DOMContentLoaded') { 
+        // Data fetching simulation
+        setTimeout(() => {
+          render();
+        }, 500);
+      }
+
+    }
+
+    const render = () => {
+      const loader = document.querySelector('[data-component="loader"]');
+      loader.style.display = 'none';
+      console.log(import.meta.env.VITE_APP_NAME + ' fully loaded')
+    }
+
+    ['beforeload', 'load', 'DOMContentLoaded', 'beforeunload', 'unload'].forEach(eventType =>
+      window.addEventListener(eventType, handleLoadingEvents(eventType))
+    );
+  </script>
+  <!-- <script type="module" src="./js/all-in-one.js"></script> -->
+  <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
