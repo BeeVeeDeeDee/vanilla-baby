@@ -5,7 +5,7 @@ the Model-View-Controller (MVC) architecture. It provides a starting point for u
 how to structure and organize code in a vanilla JavaScript Single Page Application.   
 The application includes features such as routing, component rendering, and build automation.  
 
-> Read all about the architectural choices, software patterns, what & where & how @ <span style="color:dodgerblue; font-weight:700;">documentation/Breakdown.md</span>.
+> Read all about the architectural choices, software patterns, what & where & how [here](https://github.com/BeeVeeDeeDee/vanilla-baby/wiki)
 
 
 ## Get started
