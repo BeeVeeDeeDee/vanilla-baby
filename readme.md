@@ -1,4 +1,4 @@
-# Vanilla MVC
+# Vanilla Baby!
 
 The Vanilla MVC application is an example that showcases some major concepts of  
 the Model-View-Controller (MVC) architecture. It provides a starting point for understanding  
