@@ -21,4 +21,6 @@ to roll-up the project which produces a folder called `production`:
 npm run build
 ```
 
+## Branch rules
 
+This repo has branch protection, created a new branch when adding/refctoring code.
